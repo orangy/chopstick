@@ -32,10 +32,9 @@ class ChopsticksSection(val project: Project, val folder: String = "${project.bu
     val folders = arrayListOf<ChopsticksSection>()
 
     fun folder(path: String, configure: Closure<*>) {
-        println("folder $path")
         val folder = ChopsticksSection(project, path)
         folders.add(folder)
-        configure.call(folder)
+        project.configure(folder, configure)
     }
 
     fun github(src: String) {
