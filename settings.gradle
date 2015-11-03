@@ -1,0 +1,3 @@
+rootProject.name = 'chopstick'
+include 'plugin'
+
