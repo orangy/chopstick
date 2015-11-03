@@ -27,7 +27,7 @@ open class ChopsticksExtension(val project: Project) : Configurable<ChopsticksEx
 
 }
 
-class ChopsticksSection(val project: Project, val folder: String = "build/generated-files") {
+class ChopsticksSection(val project: Project, val folder: String = "${project.buildDir.path}/generated/source/chopstick") {
     val sources = arrayListOf<URL>()
     val folders = arrayListOf<ChopsticksSection>()
 
